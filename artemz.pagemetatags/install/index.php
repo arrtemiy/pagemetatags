@@ -115,9 +115,7 @@ class artemz_pagemetatags extends CModule
                 $this->addProp($arFieldsDesc);
             //    $this->addProp($arFieldsH1);
 
-                $TO_METHOD_ARG = [&$arFields];
-
-                RegisterModuleDependences('main','OnBeforeEndBufferContent', $this->MODULE_ID, 'PageMetatags\\Main','setMetaTags', '', '', $TO_METHOD_ARG);
+                RegisterModuleDependences('main','OnBeforeEndBufferContent', $this->MODULE_ID, 'PageMetatags\\Main','setMetaTags');
                 RegisterModuleDependences('main', 'OnEndBufferContent', $this->MODULE_ID, 'PageMetatags\\Main', 'content');
             }
 
